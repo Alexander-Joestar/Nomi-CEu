@@ -11,7 +11,7 @@
   "manifestType": "minecraftModpack",
   "overrides": "overrides",
   "manifestVersion": 1,
-  "version": "0.5.3",
+  "version": "0.5.4",
   "author": "__tracer",
   "name": "nomi-ceu",
   "files": [
@@ -450,6 +450,14 @@
       "required": true
     },
     {
+      "projectID": 285742,
+      "fileID": 3944565,
+      "required": true,
+      "sides": [
+        "client"
+      ]
+    },
+    {
       "projectID": 291737,
       "fileID": 2920441,
       "required": true
@@ -470,6 +478,11 @@
     {
       "projectID": 298187,
       "fileID": 3005950,
+      "required": true
+    },
+    {
+      "projectID": 299488,
+      "fileID": 3015268,
       "required": true
     },
     {
@@ -795,6 +808,11 @@
     {
       "projectID": 1319894,
       "fileID": 7252924,
+      "required": true
+    },
+    {
+      "projectID": 1481727,
+      "fileID": 7889756,
       "required": true
     }
   ]

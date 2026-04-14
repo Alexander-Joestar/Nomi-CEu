@@ -34,7 +34,7 @@ export const check = async () => {
 					"Run the below Command in your Local Clone to Format the Quest Book:",
 					true,
 				)
-				.addCodeBlock("npm run gulp fixQB");
+				.addCodeBlock("pnpm run gulp fixQB");
 
 			if (e instanceof Error) summary.addDetails("Details...", e.message);
 

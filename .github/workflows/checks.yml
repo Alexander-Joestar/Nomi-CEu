@@ -28,8 +28,8 @@ jobs:
           path: |
             ~/.npm
             ./tools/node_modules
-          key: ${{ runner.os }}-npm-${{ hashFiles('./tools/package-lock.json') }}
-          restore-keys: ${{ runner.os }}-npm-
+          key: ${{ runner.os }}-pnpm-${{ hashFiles('./tools/pnpm-lock.yaml') }}
+          restore-keys: ${{ runner.os }}-pnpm-
 
       - name: Setup NodeJS v24
         uses: actions/setup-node@v6
@@ -40,27 +40,27 @@ jobs:
       - name: Setup NPM Packages
         if: steps.npm-cache.outputs.cache-hit != 'true'
         working-directory: ./tools
-        run: npm ci
+        run: pnpm install --frozen-lockfile
 
       - name: Check Buildscripts
         working-directory: ./tools
-        run: npm run check && npm run lint
+        run: pnpm run check && pnpm run lint
 
       - name: Check Manifest
         working-directory: ./tools
-        run: npm run gulp checkManifest
+        run: pnpm run gulp checkManifest
 
       - name: Check Groovy Scripts
         working-directory: ./tools
-        run: npm run groovyLint
+        run: pnpm run groovyLint
 
       - name: Check QB
         working-directory: ./tools
-        run: npm run gulp checkQB
+        run: pnpm run gulp checkQB
 
       - name: Build Lang Typo Check
         working-directory: ./tools
-        run: npm run gulp buildTypoCheck
+        run: pnpm run gulp buildTypoCheck
 
       - name: Lang Typo Check
         uses: crate-ci/typos@v1
@@ -102,8 +102,8 @@ jobs:
           path: |
             ~/.npm
             ./tools/node_modules
-          key: ${{ runner.os }}-npm-${{ hashFiles('./tools/package-lock.json') }}
-          restore-keys: ${{ runner.os }}-npm-
+          key: ${{ runner.os }}-pnpm-${{ hashFiles('./tools/pnpm-lock.yaml') }}
+          restore-keys: ${{ runner.os }}-pnpm-
 
       - name: Setup NodeJS v24
         uses: actions/setup-node@v6
@@ -114,11 +114,11 @@ jobs:
       - name: Setup NPM Packages
         if: steps.npm-cache.outputs.cache-hit != 'true'
         working-directory: ./tools
-        run: npm ci
+        run: pnpm install --frozen-lockfile
 
       - name: Check Manifest Files
         working-directory: ./tools
-        run: npm run gulp checkManifestFiles
+        run: pnpm run gulp checkManifestFiles
         env:
           CFCORE_API_TOKEN: ${{ secrets.CFCORE_API_TOKEN }}
 
@@ -172,8 +172,8 @@ jobs:
           path: |
             ~/.npm
             ./tools/node_modules
-          key: ${{ runner.os }}-npm-${{ hashFiles('./tools/package-lock.json') }}
-          restore-keys: ${{ runner.os }}-npm-
+          key: ${{ runner.os }}-pnpm-${{ hashFiles('./tools/pnpm-lock.yaml') }}
+          restore-keys: ${{ runner.os }}-pnpm-
 
       - name: Setup NodeJS v24
         uses: actions/setup-node@v6
@@ -184,7 +184,7 @@ jobs:
       - name: Setup NPM Packages
         if: steps.npm-cache.outputs.cache-hit != 'true'
         working-directory: ./tools
-        run: npm ci
+        run: pnpm install --frozen-lockfile
 
       - name: Checkout Head Ref
         uses: actions/checkout@v6
@@ -195,7 +195,7 @@ jobs:
 
       - name: Generate Comment Contents
         working-directory: ./tools
-        run: npm run gulp manifestChangeComment
+        run: pnpm run gulp manifestChangeComment
         env:
           CFCORE_API_TOKEN: ${{ secrets.CFCORE_API_TOKEN }}
 

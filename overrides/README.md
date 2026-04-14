@@ -1,20 +1,18 @@
-# Expert Mode Installation
-Config Changes for Normal and Expert Mode are found in `/config-overrides/normal` and `/config-overrides/expert` respectively.
+# 专家模式安装
+普通模式和专家模式的配置分别放在 `/config-overrides/normal` 和 `/config-overrides/expert`。
 
-Users can use any of the below methods to replace configs:
-
-## Manual
-- Drag the files inside `/config-overrides/expert` into the main `config` folder, as shown in the below image.
-- **Make sure to replace existing files!**
-- **MacOS: Merge folders, don't replace them!**
-
+你可以用下面任一方式替换配置：
+## 手动
+- 把 `/config-overrides/expert` 里的文件拖到主 `config` 文件夹里。
+- 必须覆盖已有文件。
+- macOS 不要整文件夹替换，改为合并。
 ![image](https://user-images.githubusercontent.com/61507029/168111281-65006a94-4b4d-4255-aca1-1f5039eec705.png)
 
-## Automatic Installation
-### Windows:
-1. **(CurseForge Downloads Only)** Download [here](https://raw.githubusercontent.com/Nomi-CEu/Nomi-CEu/main/pack-mode-switcher.bat) (right click - save as) save it to the root directory of the pack (the same level as `\config`).
-2. Run the pack mode switcher in a terminal with `./pack-mode-switcher.bat`.
+## 自动安装
+### Windows
+1. 仅限 CurseForge 下载版。下载 [pack-mode-switcher.bat](https://raw.githubusercontent.com/Nomi-CEu/Nomi-CEu/main/pack-mode-switcher.bat)，放到整合包根目录，也就是和 `config` 同级的位置。
+2. 在该目录运行 `./pack-mode-switcher.bat`。
 
-### Mac/GNU/Linux System:
-1. **(CurseForge Downloads Only)** Run `curl -O https://raw.githubusercontent.com/Nomi-CEu/Nomi-CEu/main/pack-mode-switcher.sh` to download the script, or download it [here](https://raw.githubusercontent.com/Nomi-CEu/Nomi-CEu/main/pack-mode-switcher.sh).
-2. Run `chmod +x pack-mode-switcher.sh; sh pack-mode-switcher.sh` in the pack root directory (the one containing `/config`).
+### Mac / GNU / Linux
+1. 仅限 CurseForge 下载版。运行 `curl -O https://raw.githubusercontent.com/Nomi-CEu/Nomi-CEu/main/pack-mode-switcher.sh` 下载脚本，或直接下载 [pack-mode-switcher.sh](https://raw.githubusercontent.com/Nomi-CEu/Nomi-CEu/main/pack-mode-switcher.sh)。
+2. 在整合包根目录执行 `chmod +x pack-mode-switcher.sh; sh pack-mode-switcher.sh`。

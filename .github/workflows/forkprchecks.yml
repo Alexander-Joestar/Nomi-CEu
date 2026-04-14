@@ -82,18 +82,18 @@ jobs:
 
       - name: Setup NPM Packages
         working-directory: ./tools
-        run: npm ci
+        run: pnpm install --frozen-lockfile
 
       - name: Check Manifest Files
         working-directory: ./tools
-        run: npm run gulp checkManifestFiles
+        run: pnpm run gulp checkManifestFiles
         env:
           CFCORE_API_TOKEN: ${{ secrets.CFCORE_API_TOKEN }}
 
       - name: Make Artifact Names
         id: artifactNames
         working-directory: ./tools
-        run: npm run gulp makeArtifactNames
+        run: pnpm run gulp makeArtifactNames
 
   buildClient:
     name: Build Fork PR Client (${{ github.event.pull_request.head.sha }})
@@ -117,11 +117,11 @@ jobs:
 
       - name: Setup NPM Packages
         working-directory: ./tools
-        run: npm ci
+        run: pnpm install --frozen-lockfile
 
       - name: Build Client
         working-directory: ./tools
-        run: npm run gulp buildClient
+        run: pnpm run gulp buildClient
         env:
           CFCORE_API_TOKEN: ${{ secrets.CFCORE_API_TOKEN }}
 
@@ -155,11 +155,11 @@ jobs:
 
       - name: Setup NPM Packages
         working-directory: ./tools
-        run: npm ci
+        run: pnpm install --frozen-lockfile
 
       - name: Build Server
         working-directory: ./tools
-        run: npm run gulp buildServer
+        run: pnpm run gulp buildServer
         env:
           CFCORE_API_TOKEN: ${{ secrets.CFCORE_API_TOKEN }}
 
@@ -193,11 +193,11 @@ jobs:
 
       - name: Setup NPM Packages
         working-directory: ./tools
-        run: npm ci
+        run: pnpm install --frozen-lockfile
 
       - name: Build Lang
         working-directory: ./tools
-        run: npm run gulp buildLang
+        run: pnpm run gulp buildLang
         env:
           CFCORE_API_TOKEN: ${{ secrets.CFCORE_API_TOKEN }}
 
@@ -229,11 +229,11 @@ jobs:
 
       - name: Setup NPM Packages
         working-directory: ./tools
-        run: npm ci
+        run: pnpm install --frozen-lockfile
 
       - name: Check Manifest Files
         working-directory: ./tools
-        run: npm run gulp checkManifestFiles
+        run: pnpm run gulp checkManifestFiles
         env:
           CFCORE_API_TOKEN: ${{ secrets.CFCORE_API_TOKEN }}
 
@@ -292,7 +292,7 @@ jobs:
 
       - name: Setup NPM Packages
         working-directory: ./tools
-        run: npm ci
+        run: pnpm install --frozen-lockfile
 
       - name: Checkout Head Ref
         uses: actions/checkout@v6
@@ -304,7 +304,7 @@ jobs:
 
       - name: Generate Comment Contents
         working-directory: ./tools
-        run: npm run gulp manifestChangeComment
+        run: pnpm run gulp manifestChangeComment
         env:
           CFCORE_API_TOKEN: ${{ secrets.CFCORE_API_TOKEN }}
 

@@ -15,11 +15,7 @@ import {
 } from "./util.ts";
 import logInfo, { logError, logWarn } from "./log.ts";
 
-type CFResponse =
-	| {
-			data: unknown;
-	  }
-	| undefined;
+type CFResponse = | { data: unknown; } | undefined;
 
 function getCurseForgeToken() {
 	const vari = "CFCORE_API_TOKEN";

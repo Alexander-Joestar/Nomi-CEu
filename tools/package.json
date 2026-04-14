@@ -5,14 +5,15 @@
 	"main": "gulpfile.ts",
 	"author": "Nomi-CEu Team",
 	"license": "LGPL-3.0",
+	"packageManager": "pnpm@10.33.0",
 	"type": "module",
 	"private": true,
 	"scripts": {
 		"gulp": "node --import ./tsNodeESMRegister.mjs node_modules/gulp/bin/gulp.js",
 		"check": "tsc --pretty --noUnusedLocals --noUnusedParameters",
-		"lint": "eslint .",
-		"groovyLint": "npm-groovy-lint --path ../overrides/groovy --config ../overrides/groovy/.groovylintrc.json --failon info && npm run gulp checkGrs",
-		"groovyFix": "npm-groovy-lint --path ../overrides/groovy --config ../overrides/groovy/.groovylintrc.json --failon info --fix && npm run gulp checkGrs"
+		"lint": "oxlint .",
+		"groovyLint": "npm-groovy-lint --path ../overrides/groovy --config ../overrides/groovy/.groovylintrc.json --failon info && pnpm run gulp checkGrs",
+		"groovyFix": "npm-groovy-lint --path ../overrides/groovy --config ../overrides/groovy/.groovylintrc.json --failon info --fix && pnpm run gulp checkGrs"
 	},
 	"imports": {
 		"#types/*": "./types/*",
@@ -53,8 +54,6 @@
 		"del": "^8.0.1",
 		"diff-match-patch": "^1.0.5",
 		"eslint": "^10.2.0",
-		"eslint-config-prettier": "^10.1.8",
-		"eslint-plugin-prettier": "^5.5.5",
 		"fake-diff": "^1.0.0",
 		"fancy-log": "^2.0.0",
 		"filesize": "^11.0.15",
@@ -75,7 +74,7 @@
 		"mustache": "^4.2.0",
 		"npm-groovy-lint": "^17.0.2",
 		"picomatch": "^4.0.4",
-		"prettier": "^3.8.2",
+		"oxlint": "^1.60.0",
 		"retry-axios": "^4.0.2",
 		"sanitize-filename": "^1.6.4",
 		"send-discord-webhook": "^0.1.2",

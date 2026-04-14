@@ -1,6 +1,6 @@
 <p align="center"><img src="https://raw.githubusercontent.com/Nomi-CEu/Branding/refs/heads/main/Nomi%20CEu/Logo/256x/logo-normal.png" alt="Logo"></p>
-<h1 align="center">Nomifactory CEu</h1>
-<p align="center"><b><i>Fork of <a href="https://github.com/Nomifactory/Nomifactory"> Nomifactory</a>, using <a href="https://github.com/GregTechCEu/GregTech"> GregTech CEu</a> and its related mods.</i></b></p>
+<h1 align="center">Nomi-CEu</h1>
+<p align="center"><b><i>基于 <a href="https://github.com/Nomifactory/Nomifactory">Nomifactory</a> 的分支，采用 <a href="https://github.com/GregTechCEu/GregTech">GregTech CEu</a> 及其相关模组。</i></b></p>
 <h1 align="center">
     <a href="https://github.com/Nomi-CEu/Nomi-CEu/"><img src="https://img.shields.io/github/stars/Nomi-CEu/Nomi-CEu?style=for-the-badge&logo=github&logoColor=white" alt="Stars"></a>
     <a href="https://nightly.link/Nomi-CEu/Nomi-CEu/workflows/testbuildpack/main"><img src="https://img.shields.io/github/last-commit/Nomi-CEu/Nomi-CEu/main?style=for-the-badge&logo=githubactions&logoColor=white&label=Nightly%20Builds&color=%238a67ab" alt="Builds"></a>
@@ -11,35 +11,37 @@
     <a href="https://github.com/Nomi-CEu/Nomi-CEu/releases"><img src="https://img.shields.io/github/downloads/Nomi-CEu/Nomi-CEu/total?sort=semver&logo=github&label=&style=for-the-badge&color=2d2d2d&labelColor=545454&logoColor=FFFFFF" alt="GitHub"></a>
 </h1>
 
-## Features:
-- GregTech Community Edition Unofficial, and its related mods, which are actively developed
-- Updated quests, progression and balance changes
-- Overhauled circuit progression closely following CEu stock
-- Multiblock versions of nearly all machines, including EBF, Freezer and DT, processing up to 256 recipes in parallel
-- New processing chains for Naquadah, Advanced SMDs, Crystal Chips, and more
-- Fixed lots of unpleasant CE-ness - fixed infinite Amp bug, different ore stone types don't clog up your inventory, etc.
-- Super-performant emissive effects on machines, coil blocks, the Fusion Reactor, and more
-- Assembly Line Research, Cleanroom, and other ported and improved features from GT5
-- Updated questbook to guide you through all the new stuff, including a completely new chapter, the Processing Lines Tab, to give you more info, useful tips and a visual representation of different processing lines, both new and old
-- Many QoL features - Wiremill can produce any wire, Creative Tank no longer uses fluids, new creative chests and tanks from CEu, etc.
-- And more...
+## 特性
+- 持续更新的 GregTech CEu 及相关模组
+- 重做后的任务、进度和配平
+- 更贴近 CEu 原版思路的电路进阶
+- 几乎所有机器都有多方块版本，最高支持 256 并行
+- 新的处理链：Naquadah、进阶 SMD、水晶芯片等
+- 修复了不少旧版 CE 的麻烦问题
+- 机器、线圈、聚变反应堆等支持高性能发光效果
+- 引入并改良了 Assembly Line Research、Cleanroom 等 GT5 特性
+- 更新后的任务书，新增 Processing Lines 章节
+- 多项便利优化，例如任意线材、创意储罐等
 
-## Translations
-Translations are offered for Nomi-CEu, in a separate 'language pack'. This is available to download [here](https://nightly.link/Nomi-CEu/Nomi-CEu-Translations/workflows/pushbuildpack/main?preview) (download the 'nomi-ceu' zip for Nomi-CEu).
+## 翻译包
+中文等翻译以独立语言包提供，下载见 [这里](https://nightly.link/Nomi-CEu/Nomi-CEu-Translations/workflows/pushbuildpack/main?preview)，请选择 `nomi-ceu` 压缩包。
+更多语言状态见 [翻译仓库](https://github.com/Nomi-CEu/Nomi-CEu-Translations/)。
 
-For more information, including supported languages and their status, see [the GitHub Page](https://github.com/Nomi-CEu/Nomi-CEu-Translations/).
+## 安装与自定义
+安装、更新和自定义说明见 [Wiki](https://github.com/Nomi-CEu/Nomi-CEu/wiki)。
+## 自定义模组
+如果你要自己加 mod，优先把 CurseForge 的 `projectID` 和 `fileID` 写进 [manifest.json](manifest.json)。客户端专用模组用 `sides: ["client"]`，只给服务器用的模组用 `sides: ["server"]`，两边都要的模组就不要写 `sides`。
 
-## Installing, Updating and Customizing Information
-Player Information, including recommended ways to install the pack, is on our [wiki](https://github.com/Nomi-CEu/Nomi-CEu/wiki).
+像 StackUp 这类需要额外配置的模组，第一次启动后要把生成的配置文件一并提交到 `overrides/config`，否则只加依赖不改配置，效果可能还是默认值。
 
-## Server Setup and Information
-Details on how to setup a basic server, some important server admin information, and how to update servers, is on our [wiki](https://github.com/Nomi-CEu/Nomi-CEu/wiki/Page-1:-Player-Information#section-3-server-installation-and-updating).
+## 服务器
+基础服务器搭建、管理和更新说明见 [Wiki](https://github.com/Nomi-CEu/Nomi-CEu/wiki/Page-1:-Player-Information#section-3-server-installation-and-updating)。
 
-## Contributing and Maintainer Information
-This is available on our [wiki](https://github.com/Nomi-CEu/Nomi-CEu/wiki/Part-2:-Contributing-Information).
+## 贡献
+贡献和维护说明见 [Wiki](https://github.com/Nomi-CEu/Nomi-CEu/wiki/Part-2:-Contributing-Information)。
 
-## Addon Mods
-Nomi-CEu comes with addon scripts for the following mods. You can drop them into the mods folder, and their recipes will be adjusted accordingly.
+## 扩展模组
+下面这些模组有配套脚本，把它们放进 mods 文件夹后，配方会自动调整。
 
 - [AE2 Fluid Crafting Rework](https://www.curseforge.com/minecraft/mc-mods/ae2-fluid-crafting-rework)
 - [Compact Machines](https://www.curseforge.com/minecraft/mc-mods/compact-machines)
@@ -48,46 +50,40 @@ Nomi-CEu comes with addon scripts for the following mods. You can drop them into
 - [Project Red - Illumination](https://www.curseforge.com/minecraft/mc-mods/project-red-illumination)
 - [ZBGT](https://www.curseforge.com/minecraft/mc-mods/zbgt)
 
-\* Note: If you are adding these mods via the CurseForge app, remove the extra copy of AE2 **(*non*-extended life)**, of which it might automatically download.
+注：如果你通过 CurseForge App 安装，请删掉它多下的 AE2 普通版，只保留 extended life 版本。
 
-## Expert Mode
-If you want a harder, or perhaps a more "true" GregTech experience, check out the Expert mode. This pack mode is based on the [Self-Torture Edition Fork](https://github.com/NotMyWing/Omnifactory-Self-Torture-Edition) of the original pack.
+## 专家模式
+如果你想要更难一些，或者更接近“纯粹” GregTech 的体验，可以使用专家模式。它基于原版整合包的 [Self-Torture Edition Fork](https://github.com/NotMyWing/Omnifactory-Self-Torture-Edition)。
 
-### Highlights include:
-- Forced Peaceful Mode
-- No DME for easy infinite resources
-- Nomicoins can't be spent, or obtained
-- The Steam Age
-- More Focus on GT Power Generation
-- No Creative Tank; instead...
-    - Stabilized Micro Miners for late-game infinite resources
-- Harder recipes for assorted things like Iridium, Graphene, Numismatic Dynamos, and more
+### 主要差异
+- 强制和平模式
+- 不提供 DME 的轻松无限资源
+- Nomicoin 不能获得，也不能花费
+- 加入蒸汽时代
+- 更强调 GT 发电
+- 不再提供创意储罐，后期改为稳定微型采矿机
+- 若干配方更难，例如铱、石墨烯、数控动态机等
 
-### Installation Instructions:
+### 安装
+#### 脚本安装
 
-#### Script Installation Instructions:
+Windows：
+1. 仅限 CurseForge 下载版。下载 [pack-mode-switcher.bat](https://raw.githubusercontent.com/Nomi-CEu/Nomi-CEu/main/pack-mode-switcher.bat)，放到整合包根目录，也就是和 `config` 同级的位置。
+2. 在该目录运行 `./pack-mode-switcher.bat`。
 
-<hr>
+Mac / GNU / Linux：
+1. 仅限 CurseForge 下载版。下载 [pack-mode-switcher.sh](https://raw.githubusercontent.com/Nomi-CEu/Nomi-CEu/main/pack-mode-switcher.sh)，或用 `curl -O` 获取。
+2. 在整合包根目录执行 `chmod +x pack-mode-switcher.sh; sh pack-mode-switcher.sh`。
 
-##### Windows:
- 1. **(CurseForge Downloads Only)** Download the script [here](https://raw.githubusercontent.com/Nomi-CEu/Nomi-CEu/main/pack-mode-switcher.bat), and save it to the root directory of the pack (the same level as `\config`).
- 2. Run the pack mode switcher in a terminal with `./pack-mode-switcher.bat`
+#### 手动安装
+手动安装说明见 [overrides/README.md](overrides/README.md)。
 
-##### Mac/GNU/Linux:
- 1. **(CurseForge Downloads Only)** Run `curl -O https://raw.githubusercontent.com/Nomi-CEu/Nomi-CEu/main/pack-mode-switcher.sh` to download the script, or download it [here](https://raw.githubusercontent.com/Nomi-CEu/Nomi-CEu/main/pack-mode-switcher.sh).
- 2. Run `chmod +x pack-mode-switcher.sh; sh pack-mode-switcher.sh` in the pack root directory (the one containing `/config`).
-
-<hr>
-
-#### Manual installation instructions are available [here](https://github.com/Nomi-CEu/Nomi-CEu/blob/main/overrides/README.md).
-
-## Credits
-Original pack by [Exaxxion](https://github.com/Exaxxion).  
-Stabilized miner textures from [Self-Torture Edition](https://github.com/NotMyWing/Omnifactory-Self-Torture-Edition).  
-README.md base from [Gregtech CEu](https://github.com/GregTechCEu/GregTech).  
-Certain new quests from [GregTech Community Pack](https://github.com/GregTechCEu/GregTech-Community-Pack).  
-GTCE item-ID to GTCEu item-ID conversion scripts by [brachy84](https://github.com/brachy84).  
-Perfect Gem textures from [FurfSky Reborn](http://furfsky.net/). ([Permission](https://ibb.co/bBpksq0) at [this message](https://discord.com/channels/771187253937438762/774353150278369351/938438074503942184) in [FurfSky Reborn server](https://discord.gg/fsr)).  
-Certain hard mode recipe chains and Magnetron texture from [GCY Science](https://github.com/GregTechCEu/gregicality-science).  
-Flux Networks compatibility recipes by [smudgerox](https://github.com/smudgerox).  
-**Thank you!**
+## 致谢
+原始整合包作者 [Exaxxion](https://github.com/Exaxxion)。
+稳定矿机纹理来自 [Self-Torture Edition](https://github.com/NotMyWing/Omnifactory-Self-Torture-Edition)。
+README 基础来自 [GregTech CEu](https://github.com/GregTechCEu/GregTech)。
+部分新任务来自 [GregTech Community Pack](https://github.com/GregTechCEu/GregTech-Community-Pack)。
+GTCE 到 GTCEu 的物品 ID 转换脚本来自 [brachy84](https://github.com/brachy84)。
+完美宝石纹理来自 [FurfSky Reborn](http://furfsky.net/)。
+部分硬核模式配方链和 Magnetron 纹理来自 [GCY Science](https://github.com/GregTechCEu/gregicality-science)。
+Flux Networks 兼容配方来自 [smudgerox](https://github.com/smudgerox)。

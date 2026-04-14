@@ -83,8 +83,8 @@ jobs:
           path: |
             ~/.npm
             ./tools/node_modules
-          key: ${{ runner.os }}-npm-${{ hashFiles('./tools/package-lock.json') }}
-          restore-keys: ${{ runner.os }}-npm-
+          key: ${{ runner.os }}-pnpm-${{ hashFiles('./tools/pnpm-lock.yaml') }}
+          restore-keys: ${{ runner.os }}-pnpm-
 
       - name: Setup NodeJS v24
         uses: actions/setup-node@v6
@@ -95,11 +95,11 @@ jobs:
       - name: Setup NPM Packages
         if: steps.npm-cache.outputs.cache-hit != 'true'
         working-directory: ./tools
-        run: npm ci
+        run: pnpm install --frozen-lockfile
 
       - name: Create Changelog
         working-directory: ./tools
-        run: npm run gulp createChangelog
+        run: pnpm run gulp createChangelog
         env:
           CFCORE_API_TOKEN: ${{ secrets.CFCORE_API_TOKEN }}
           COMPARE_TAG: ${{ inputs.compare_tag }}

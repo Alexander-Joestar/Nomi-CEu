@@ -2,12 +2,10 @@ import { defineConfig } from "eslint/config";
 
 import eslint from "@eslint/js";
 import tsEslint from "typescript-eslint";
-import prettierEslint from "eslint-plugin-prettier/recommended";
 
 export default defineConfig(
 	eslint.configs.recommended,
 	tsEslint.configs.recommendedTypeChecked,
-	prettierEslint,
 	[
 		{
 			languageOptions: {
@@ -15,7 +13,6 @@ export default defineConfig(
 					projectService: {
 						allowDefaultProject: [
 							"eslint.config.ts",
-							".prettierrc.ts",
 							"tsNodeESMRegister.mjs",
 						],
 					},
